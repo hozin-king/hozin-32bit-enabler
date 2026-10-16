@@ -1,0 +1,5 @@
+# Buka kunci instalasi APK 32-bit di perangkat 64-bit-only.
+# Magisk menerapkan system.prop ini saat boot (resetprop).
+ro.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.product.cpu.abilist64=arm64-v8a

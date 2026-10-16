@@ -1,0 +1,6 @@
+id=hozin-32bit-enabler
+name=Hozin 32-bit Enabler
+version=v1.0
+versionCode=1
+author=Hozin King
+description=Tambah armeabi-v7a/armeabi ke CPU ABI list supaya APK 32-bit-only bisa di-install di HP 64-bit-only. Bukan translator — hanya buka kunci instalasi.

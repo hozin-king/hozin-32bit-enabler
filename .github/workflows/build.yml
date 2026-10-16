@@ -1,0 +1,26 @@
+name: Build module zip
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Zip Magisk module
+        run: |
+          cd $GITHUB_WORKSPACE
+          zip -r -9 Hozin32bitEnabler-v1.0.zip \
+            META-INF module.prop system.prop \
+            -x "*.git*"
+          unzip -l Hozin32bitEnabler-v1.0.zip
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Hozin32bitEnabler
+          path: Hozin32bitEnabler-v1.0.zip
